@@ -1,0 +1,7 @@
+{
+  "robot": {"mass": 35.0, "height": 0.8, "gravity": 9.81, "torque_limit": 80.0, "angular_damping": 2.0, "velocity_drag": 0.3, "fall_angle_deg": 35.0},
+  "balance": {"kp": 1100.0, "ki": 60.0, "kd": 260.0},
+  "velocity": {"kp": 0.06, "ki": 0.012, "kd": 0.0},
+  "simulation": {"dt": 0.01, "initial_angle_deg": 3.0, "duration": 20.0, "lean_limit_deg": 10.0, "command_speed": 1.0},
+  "disturbance": {"force": 100.0, "duration": 0.15}
+}
