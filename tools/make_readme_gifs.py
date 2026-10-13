@@ -91,6 +91,19 @@ def failure_frames():
     return frames
 
 
+def hover_frames():
+    """Pause on real parameter help cards so the README teaches the controls."""
+    app = live_app("pid")
+    app.running = False
+    frames = []
+    for index in (0, 14, 9, 2):
+        app.selected = index
+        app.hovered_field = index
+        for _ in range(10):
+            frames.append(frame(app))
+    return frames
+
+
 def save_gif(images, path):
     path.parent.mkdir(parents=True, exist_ok=True)
     images[0].save(path, save_all=True, append_images=images[1:], duration=100,
@@ -103,4 +116,5 @@ if __name__ == "__main__":
     pygame.display.set_mode((1240, 820))
     save_gif(workflow_frames(), root / "assets" / "balance_lab.gif")
     save_gif(failure_frames(), root / "assets" / "failure_modes.gif")
+    save_gif(hover_frames(), root / "assets" / "parameter_help.gif")
     pygame.quit()

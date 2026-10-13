@@ -6,6 +6,8 @@ An interactive 2D robot-balance simulator. Tune a cascaded PID controller, push 
 
 ![Failure modes: no control and excessive gain](assets/failure_modes.gif)
 
+![Hover cards explain what each parameter changes](assets/parameter_help.gif)
+
 The robot is a simplified inverted pendulum. W/S requests velocity; the controller chooses lean and torque. Space applies an external push. The stickman can fall by design: the experiment is to find the controller's recovery limit.
 
 ## Quickstart
