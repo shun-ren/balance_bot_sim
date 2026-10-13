@@ -10,6 +10,21 @@ An interactive 2D robot-balance simulator. Tune a cascaded PID controller, push 
 
 The robot is a simplified inverted pendulum. W/S requests velocity; the controller chooses lean and torque. Space applies an external push. The stickman can fall by design: the experiment is to find the controller's recovery limit.
 
+## Why this exists
+
+This is a small control-systems lab: it makes an unstable robot visible, measurable, and tunable.
+
+It helps you learn how to:
+
+- turn a physical model into a simulation;
+- use feedback to stabilize an unstable system;
+- tune P, I, and D gains and recognize oscillation or windup;
+- understand actuator saturation and recovery limits;
+- compare a command with the robot's measured response;
+- run an experiment, inspect metrics, and improve the next run.
+
+The benefit is the bridge between equations and behavior. You can change one assumption, see the robot respond, and use the logged evidence to explain why it recovered or fell. It is intentionally a balance-control study, not a full walking humanoid or game.
+
 ## Quickstart
 
 Windows:
