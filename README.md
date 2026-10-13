@@ -25,6 +25,26 @@ It helps you learn how to:
 
 The benefit is the bridge between equations and behavior. You can change one assumption, see the robot respond, and use the logged evidence to explain why it recovered or fell. It is intentionally a balance-control study, not a full walking humanoid or game.
 
+## Properties worth exploring
+
+Change one property at a time, run the experiment, and compare the dashboard.
+
+| Property | What it changes | What to watch for |
+| --- | --- | --- |
+| Balance Kp | Strength of the immediate lean correction | Higher values react faster, then may oscillate or saturate |
+| Balance Ki | Correction for persistent lean bias | Removes steady error, but too much causes slow overshoot |
+| Balance Kd | Damping against angular motion | Reduces swinging; too much makes recovery sluggish |
+| Velocity Kp | Lean requested for a speed error | Higher values accelerate harder and use more balance margin |
+| Mass | Rotational and translational inertia | Heavier robots need more torque to change or recover motion |
+| COM height | Distance from the support to the centre of mass | Taller bodies have a larger gravity-driven overturning effect |
+| Torque limit | Maximum actuator authority | Lower values reveal saturation and make large pushes unrecoverable |
+| Fall angle | Boundary that ends a run | Smaller values define a stricter recovery test |
+| Initial lean | Starting disturbance before control acts | Larger offsets test capture from a difficult initial state |
+| Push force / duration | External disturbance strength and momentum | Increase them to map the controller's recovery envelope |
+| Physics dt | Numerical integration step | Smaller values improve resolution; larger values can distort stability |
+
+The setup hover cards cover the remaining properties, including gravity, command speed, lean limit, and run duration.
+
 ## Quickstart
 
 Windows:
